@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="么佳睿专升本数学与英语前备知识广度筛查">
+  <title>么佳睿 · 专升本前备知识诊断</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><b>JR / Assessment</b><span id="clock">未开始</span></header>
+  <main>
+    <section id="intro" class="card intro">
+      <p class="eyebrow">BASELINE · V1</p>
+      <h1>先找到真正的起点。</h1>
+      <p class="lead">这不是排名考试。请独立作答，不查资料；不会就选“跳过”。系统会记录每题用时与修改情况，用于判断知识断点。</p>
+      <div class="facts"><span>数学 16 题</span><span>英语 16 题</span><span>约 35–45 分钟</span></div>
+      <label>姓名<input id="student" autocomplete="name" value="么佳睿"></label>
+      <label>测试编号<input id="testId" value="Baseline-2026-09"></label>
+      <button id="start" class="primary">开始测试 <span>→</span></button>
+      <small>作答进度会保存在当前设备。提交后可导出结构化结果文件。</small>
+    </section>
+
+    <section id="quiz" class="hidden">
+      <div class="progress-row"><span id="sectionName"></span><b id="counter"></b></div>
+      <div class="bar"><i id="bar"></i></div>
+      <article class="card question-card">
+        <p id="qType" class="eyebrow"></p>
+        <h2 id="prompt"></h2>
+        <div id="options"></div>
+        <p id="hint" class="hint"></p>
+        <div class="actions">
+          <button id="prev" class="ghost">← 上一题</button>
+          <button id="skip" class="ghost">跳过</button>
+          <button id="next" class="primary">下一题 →</button>
+        </div>
+      </article>
+      <p class="quiet">请按自己的第一判断作答；修改答案没有关系，系统只用于诊断。</p>
+    </section>
+
+    <section id="result" class="hidden">
+      <div class="card result-card">
+        <p class="eyebrow">COMPLETED</p>
+        <h1>第一轮筛查完成</h1>
+        <p id="summary" class="lead"></p>
+        <div id="modules" class="modules"></div>
+        <div class="result-actions">
+          <button id="download" class="primary">导出诊断结果 JSON</button>
+          <button id="restart" class="ghost">重新测试</button>
+        </div>
+        <small>请把导出的文件发给指导者。网页端不上传姓名或答案。</small>
+      </div>
+    </section>
+  </main>
+  <footer>依据山东省教育招生考试院 2026 年公共基础课考试要求反向设计 · V1 仅用于定位教学起点</footer>
+  <script src="app.js"></script>
+</body>
+</html>

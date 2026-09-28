@@ -7,7 +7,7 @@ GitHub Pages 继续托管答题页；Cloudflare Worker 接收提交，D1 保存�
 3. 在 Worker 的 Settings → Bindings 中添加 D1 database binding：变量名 `DB`，选择刚创建的数据库。
 4. 在 Settings → Variables and Secrets 添加 Secret：名称 `ADMIN_PASSWORD`，设置仅你知道的长密码；随后重新部署 Worker。
 5. 测试 Worker 的 `/api/submissions` 接口和 GitHub Pages 来源：`https://shuffletongue.github.io`。
-6. 将 Worker 的 `workers.dev` 根网址填入 `dist/config.js` 的 `ASSESSMENT_API_URL`，提交后 GitHub Pages 自动更新。告诉我这个公开 Worker 网址即可，我可以代为设置前端并完成联调；不要把查看密码发到聊天里。
+6. 将 Worker 的 `workers.dev` 根网址填入仓库根目录 `config.js` 的 `ASSESSMENT_API_URL`，提交后 GitHub Pages 自动更新。告诉我这个公开 Worker 网址即可，我可以代为设置前端并完成联调；不要把查看密码发到聊天里。
 
 后台查看页：`https://shuffletongue.github.io/jiarui-assessment-v1/admin.html`。提交接口按 `submissionId` 幂等去重；最多保留最近 50 条用于页面查看。数据库写入失败时，学生端结果仍留在该设备，并显示重试与应急备份。
 

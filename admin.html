@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>测评结果 · 指导者私密查看</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-card{max-width:900px}.admin-pass{display:flex;gap:12px;align-items:end}.admin-pass label{flex:1}.submission-list{display:grid;gap:14px;margin-top:24px}.submission{border:1px solid #dfe4ef;border-radius:14px;padding:18px;overflow:auto}.submission h2{font-size:1.2rem;margin:0 0 8px}.submission table{border-collapse:collapse;width:100%;margin-top:14px;font-size:.92rem}.submission th,.submission td{border-bottom:1px solid #dfe4ef;padding:9px;text-align:left;vertical-align:top}.submission th{color:#677085}.admin-error{color:#a23e32}.admin-meta{color:#677085}
+    @media(max-width:600px){.admin-pass{display:block}.submission table{font-size:.82rem}}
+  </style>
+</head>
+<body>
+  <header><b>JR / Private Results</b><a href="./">返回测评</a></header>
+  <main>
+    <section class="card admin-card">
+      <p class="eyebrow">GUIDANCE ONLY</p>
+      <h1>测评记录</h1>
+      <p class="lead">仅指导者可查看。结果通过加密连接从后台读取。</p>
+      <form id="login" class="admin-pass">
+        <label>查看密码<input id="password" type="password" autocomplete="current-password" required></label>
+        <button class="primary" type="submit">查看结果</button>
+      </form>
+      <p id="message" role="status" aria-live="polite"></p>
+      <div id="submissions" class="submission-list"></div>
+    </section>
+  </main>
+  <footer>此页面不在搜索引擎中索引；查看权限由后台密码验证控制。</footer>
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

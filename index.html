@@ -18,7 +18,7 @@
       <label>姓名<input id="student" autocomplete="name" value="么佳睿"></label>
       <label>测试编号<input id="testId" value="Baseline-2026-09"></label>
       <button id="start" class="primary">开始测试 <span>→</span></button>
-      <small>作答进度会保存在当前设备。提交后可导出结构化结果文件。</small>
+      <small>完成后答题结果会自动提交并保存在安全后台；作答期间也会保存在当前设备。</small>
     </section>
 
     <section id="quiz" class="hidden">
@@ -44,15 +44,18 @@
         <h1>第一轮筛查完成</h1>
         <p id="summary" class="lead"></p>
         <div id="modules" class="modules"></div>
+        <p id="submitMessage" class="submit-message" role="status" aria-live="polite"></p>
         <div class="result-actions">
-          <button id="download" class="primary">导出诊断结果 JSON</button>
+          <button id="retrySubmit" class="primary hidden">重试自动提交</button>
+          <button id="downloadBackup" class="ghost">下载应急备份</button>
           <button id="restart" class="ghost">重新测试</button>
         </div>
-        <small>请把导出的文件发给指导者。网页端不上传姓名或答案。</small>
+        <small>结果仅供测评指导者在私密查看页核对，不公开展示。</small>
       </div>
     </section>
   </main>
   <footer>依据山东省教育招生考试院 2026 年公共基础课考试要求反向设计 · V1 仅用于定位教学起点</footer>
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
